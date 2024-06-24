@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create user</title>
+
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/users/update}" th:object="${user}">
+    <input name="id" th:field="*{id}" th:value="${user.id}" hidden="hidden">
+    <label for="name">Enter user's name: </label>
+    <input type="text" th:field="*{name}" id="name" required/>
+    <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name error</div>
+    <br/>
+    <label for="lastName">Enter user's last name: </label>
+    <input type="text" th:field="*{lastName}" id="lastName" required/>
+    <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{lastName}">Name error</div>
+    <br/>
+    <label for="age">Enter user's age: </label>
+    <input type="text" th:field="*{age}" id="age" required/>
+    <div style="color:red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age error</div>
+    <br/>
+    <label for="email">Enter user's email: </label>
+    <input type="text" th:field="*{email}" id="email" required/>
+    <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{email}">Email error</div>
+    <br/>
+    <input type="submit" value="Update user!"/>
+</form>
+
+</body>
+</html>
