@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Create user</title>
+    <title>Создать юзера</title>
 
 </head>
 <body>
 
 <form th:method="POST" th:action="@{/users/update}" th:object="${user}">
     <input name="id" th:field="*{id}" th:value="${user.id}" hidden="hidden">
-    <label for="name">Enter user's name: </label>
+    <label for="name">Введите имя юзера </label>
     <input type="text" th:field="*{name}" id="name" required/>
-    <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name error</div>
+    <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Имя некорректное</div>
     <br/>
-    <label for="lastName">Enter user's last name: </label>
+    <label for="lastName">Введите фамилию юзера: </label>
     <input type="text" th:field="*{lastName}" id="lastName" required/>
-    <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{lastName}">Name error</div>
+    <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{lastName}">Фамилия некорректная</div>
     <br/>
-    <label for="age">Enter user's age: </label>
+    <label for="age">Введите возраст юзера: </label>
     <input type="text" th:field="*{age}" id="age" required/>
-    <div style="color:red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age error</div>
+    <div style="color:red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Возраст некорректный</div>
     <br/>
-    <label for="email">Enter user's email: </label>
+    <label for="email">Введите емайл юзера: </label>
     <input type="text" th:field="*{email}" id="email" required/>
-    <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{email}">Email error</div>
+    <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{email}">Емайл некорректный</div>
     <br/>
-    <input type="submit" value="Update user!"/>
+    <input type="submit" value="Обновить юзера!"/>
 </form>
 
 </body>

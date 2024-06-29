@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>All users</title>
@@ -7,7 +7,7 @@
 <body>
 
 <table border="2" cellpadding="20">
-    <caption>Table users</caption>
+    <caption>Таблица юзеров</caption>
     <thead>
     <tr>
         <th>Id</th>
@@ -27,8 +27,8 @@
         <td th:text="${user.lastName}"/>
         <td th:text="${user.age}"/>
         <td th:text="${user.email}"/>
-        <td><a th:href="@{'users/update?id=' + ${user.id}}">Update this user</a></td>
-        <td><a th:href="@{'users/delete?id=' + ${user.id}}">Delete this user</a></td>
+        <td><a th:href="@{'users/update?id=' + ${user.id}}">Обновить этого юзера</a></td>
+        <td><a th:href="@{'users/delete?id=' + ${user.id}}">Удалить этого юзера</a></td>
     </tr>
     </tbody>
 </table>
@@ -36,6 +36,6 @@
 <br/>
 
 <hr/>
-<a href="/users/new">Create new user</a>
+<a href="/users/new">Создать нового юзера</a>
 </body>
 </html>
