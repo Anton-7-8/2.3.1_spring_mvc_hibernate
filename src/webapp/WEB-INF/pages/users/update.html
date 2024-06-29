@@ -7,6 +7,7 @@
 </head>
 <body>
 
+
 <form th:method="POST" th:action="@{/users/update}" th:object="${user}">
     <input name="id" th:field="*{id}" th:value="${user.id}" hidden="hidden">
     <label for="name">Введите имя юзера </label>
